@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Cache-Control" CONTENT="no-cache"/>
+	<title>gg</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/login.css"/>
+	<script type="text/javascript" src="js/jquery/jquery-1.8.0.min.js"></script>
+</head>	
+	<body class="newlogin-bg">
+	<form id="loginForm" method="get" action="login.html">
+	    <div class="newlogin-bg">
+	         <div class="newlogin">
+	               <div class="newlogin-con">
+	                     <div class="newlogin-con02">
+	                          <div class="newlogin-title"></div>
+	                          <div class="newlogin-bored">
+	                                <div class="newlogin-bored-le">
+	                                        <div class="newlogintext">
+	                                              <h6 class="name">用 户 名：</h6>
+	                                              <span class="line"></span>
+	                                              <input type="text" id="userName" name="username" class="inputbored" value="superAdmin" />
+	                                        </div>
+	                                        <div class="newlogintext">
+	                                              <h6 class="name" >登录密码：</h6>
+	                                              <span class="line"></span>
+	                                              <input type="password" id="rpwd" name="password" class="inputbored" value="66666" />
+	                                        </div>
+	                                        
+				                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				                                 <span style=" color: red; font-size: 12px;" id="message" th:text="${message}"></span>
+				                            </div>
+	                                </div>
+	                                <div class="newlogin-bored-rg">
+	                                      <input name="" type="button" value="登 录" class="newlogin-botton le" onclick="submitForm();" />
+	                                      <input name="" type="button" value="重 置" class="newlogin-botton rg" onclick="resetForm();" />
+	                                </div>
+	                          </div>
+	                     </div>
+	                      <p>Copyright © 2017-2024, 练手v1.0 设计制作：邓峰峰</p>
+	               </div>
+	         </div>
+	    </div>
+	    
+	</form>
+</body>
+
+<script type="text/javascript"> 
+
+var b = false;
+var p = window;
+if (p != p.parent) {
+    b = true;
+};
+while (b) {
+    if (p == p.parent) {
+        p.location.href = p.location.href;
+        b = false;
+    } else {
+        p = p.parent;
+    }
+};
+
+	/**
+	 * 提交表单
+	 */
+	function submitForm(){
+		if($("#userName").val()=="" || $("#rpwd").val()==""){
+			$("#message").text("用户名或密码不能为空，请输入用户名或密码！");
+			return;
+		}
+		
+	 $('#loginForm').submit(); 
+	}
+	
+	/**
+	*重置表单
+	**/
+	function resetForm(){
+		$("#userName").val("");
+		$("#rpwd").val("");
+	}
+
+</script>
+</html>
