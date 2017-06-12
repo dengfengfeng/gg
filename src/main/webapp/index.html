@@ -5,6 +5,7 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
@@ -38,17 +39,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!--header-->
-<div class="header">
+<div class="header" id="index">
 	<div class="container">
 		<div class="logo">
 		<h1><a href="index.html">
 			一句话概括这里(背景换成妹子```)
+			
 		</a></h1>
 		</div>
 		<div class="top-nav">
 			<span class="menu"><img src="images/menu.png" alt=""> </span>
 				<ul>
-					<li class="active"><a href="index.html" class="scroll">主页留言</a></li>
+				<!-- 按钮触发模态框 -->
+
+					<li class="active">
+						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+							开始演示模态框
+						</button>
+					</li>
+					<li ><a href="#index" class="scroll">主页留言</a></li>
 					<li><a href="#about" class="scroll">相册</a></li>
 					<li><a href="#services" class="scroll">介绍一些什么</a></li>
 					<li><a href="#gallery" class="scroll">产品清单</a></li>
@@ -423,7 +432,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"> </div>
 		</div>
 		<div class="footer-top2">
-			<p >Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+			<p >Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
 		</div>
 		
 	</div>
@@ -445,6 +454,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="fasle">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					
+				</h4>
+			</div>
+			<div class="modal-body" id="myModalBody">
+				问题1
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+				<button type="button" class="btn btn-primary">
+					提交更改
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
 </div>
 </body>
 </html>
